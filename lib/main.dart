@@ -60,3 +60,8 @@ class MainApp extends StatelessWidget {
     );
   }
 }
+
+// NUEVO CÓDIGO AGREGADO PARA EL COMMIT
+void verificarInicioPimos() {
+  print("¡La plataforma web de Pimos ha arrancado con éxito!");
+}
