@@ -11,7 +11,6 @@ class DashboardView extends StatefulWidget {
 class _DashboardViewState extends State<DashboardView> {
   @override
   Widget build(BuildContext context) {
-    // Usamos LayoutBuilder para que se adapte al espacio del panel central
     return LayoutBuilder(
       builder: (context, constraints) {
         return SingleChildScrollView(
@@ -86,34 +85,49 @@ class _DashboardViewState extends State<DashboardView> {
               // --- Promociones Section ---
               Container(
                 color: const Color(0xff1a1a1a),
-                padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+                padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 30),
                 child: Column(
                   children: [
                     Text(
                       "Pimo's Promos",
                       style: GoogleFonts.montserratAlternates(
-                        fontSize: 28,
+                        fontSize: 32,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
                     ),
-                    const SizedBox(height: 30),
-                    Wrap(
-                      spacing: 20,
-                      runSpacing: 20,
-                      alignment: WrapAlignment.center,
+                    const SizedBox(height: 8),
+                    Container(
+                      width: 70,
+                      height: 3,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [Colors.red.shade900, Colors.red.shade400],
+                        ),
+                        borderRadius: BorderRadius.circular(2),
+                      ),
+                    ),
+                    const SizedBox(height: 40),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         _PromoCard(
                           image: 'assets/pimos-bg4.jpg',
                           title: 'Pimobby Fries',
+                          descripcion: 'Papas · boneless · queso · aderezo',
                         ),
+                        SizedBox(width: 24),
                         _PromoCard(
                           image: 'assets/pimos-bg2.jpeg',
                           title: 'Spicy Boneless',
+                          descripcion: 'Crujientes · salsa · a tu gusto',
                         ),
+                        SizedBox(width: 24),
                         _PromoCard(
                           image: 'assets/pimos-bg3.jpeg',
                           title: 'Combo Best Friends',
+                          descripcion: 'Comparte el sabor con quien más quieras',
                         ),
                       ],
                     ),
@@ -182,6 +196,106 @@ class _DashboardViewState extends State<DashboardView> {
   }
 }
 
+class _PromoCard extends StatefulWidget {
+  final String image;
+  final String title;
+  final String descripcion;
+
+  const _PromoCard({
+    required this.image,
+    required this.title,
+    required this.descripcion,
+  });
+
+  @override
+  State<_PromoCard> createState() => _PromoCardState();
+}
+
+class _PromoCardState extends State<_PromoCard> {
+  bool _hover = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (_) => setState(() => _hover = true),
+      onExit: (_) => setState(() => _hover = false),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 220),
+        width: 300,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: _hover
+                  ? Colors.red.shade900.withOpacity(0.5)
+                  : Colors.black.withOpacity(0.4),
+              blurRadius: _hover ? 20 : 8,
+              offset: const Offset(0, 6),
+            ),
+          ],
+        ),
+        child: Column(
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Stack(
+                children: [
+                  Image.asset(
+                    widget.image,
+                    width: 300,
+                    height: 300,
+                    fit: BoxFit.cover,
+                  ),
+                  // Overlay sutil al hacer hover
+                  AnimatedOpacity(
+                    duration: const Duration(milliseconds: 220),
+                    opacity: _hover ? 1.0 : 0.0,
+                    child: Container(
+                      width: 300,
+                      height: 300,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            Colors.transparent,
+                            Colors.red.shade900.withOpacity(0.4),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 14),
+            Text(
+              widget.title,
+              style: GoogleFonts.montserrat(
+                color: Colors.white,
+                fontSize: 17,
+                fontWeight: FontWeight.w700,
+                letterSpacing: 0.3,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 6),
+            Text(
+              widget.descripcion,
+              style: GoogleFonts.montserrat(
+                color: Colors.white38,
+                fontSize: 12,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 4),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 class _DashboardFooter extends StatelessWidget {
   const _DashboardFooter();
 
@@ -189,57 +303,65 @@ class _DashboardFooter extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      color: const Color(0xff0d0d0d),
-      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-      child: Wrap(
-        alignment: WrapAlignment.center,
-        crossAxisAlignment: WrapCrossAlignment.center,
-        spacing: 15,
-        runSpacing: 10,
-        children: const [
-          Icon(Icons.facebook_outlined, color: Colors.red, size: 30),
-          Icon(Icons.camera_alt_outlined, color: Colors.red, size: 30),
-          Icon(Icons.chat_outlined, color: Colors.red, size: 30),
-          SizedBox(width: 10),
-          Icon(Icons.location_on_outlined, color: Colors.red, size: 20),
-          Text('Dirección', style: TextStyle(color: Colors.white70, fontSize: 14)),
-          SizedBox(width: 10),
-          Text("Derechos Reservados Pimo's 2026", style: TextStyle(color: Colors.white70, fontSize: 14)),
+      padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 30),
+      decoration: BoxDecoration(
+        color: const Color(0xff0d0d0d),
+        border: Border(
+          top: BorderSide(color: Colors.red.shade900.withOpacity(0.3), width: 1),
+        ),
+      ),
+      child: Column(
+        children: [
+          Text(
+            "Pimo's",
+            style: GoogleFonts.montserrat(
+              color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+              letterSpacing: 2,
+            ),
+          ),
+          const SizedBox(height: 18),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              _FooterIcon(icon: Icons.facebook_outlined, label: 'Facebook'),
+              const SizedBox(width: 28),
+              _FooterIcon(icon: Icons.camera_alt_outlined, label: 'Instagram'),
+              const SizedBox(width: 28),
+              _FooterIcon(icon: Icons.chat_outlined, label: 'WhatsApp'),
+            ],
+          ),
+          const SizedBox(height: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.location_on_outlined, color: Colors.red.shade800, size: 16),
+              const SizedBox(width: 6),
+              const Text('Dirección', style: TextStyle(color: Colors.white38, fontSize: 12)),
+              const SizedBox(width: 20),
+              const Text("© Derechos Reservados Pimo's 2026",
+                  style: TextStyle(color: Colors.white38, fontSize: 12)),
+            ],
+          ),
         ],
       ),
     );
   }
 }
 
-class _PromoCard extends StatelessWidget {
-  final String image;
-  final String title;
-
-  const _PromoCard({required this.image, required this.title});
+class _FooterIcon extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  const _FooterIcon({required this.icon, required this.label});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(15),
-          child: Image.asset(
-            image,
-            width: 180,
-            height: 180,
-            fit: BoxFit.cover,
-          ),
-        ),
-        const SizedBox(height: 10),
-        Text(
-          title,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 14,
-            fontWeight: FontWeight.w500,
-          ),
-          textAlign: TextAlign.center,
-        ),
+        Icon(icon, color: Colors.red.shade700, size: 26),
+        const SizedBox(height: 4),
+        Text(label, style: const TextStyle(color: Colors.white30, fontSize: 10)),
       ],
     );
   }
