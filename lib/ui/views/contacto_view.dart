@@ -1,3 +1,8 @@
+// vista de contacto, se muestra la información de contacto del restaurante,
+// como la dirección, el número de teléfono, el correo electrónico y las redes sociales.
+// También se muestra un mapa con la ubicación del restaurante y un formulario de contacto 
+//para que los usuarios puedan enviar sus dudas o sugerencias directamente desde la app.
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';

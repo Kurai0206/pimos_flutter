@@ -1,3 +1,5 @@
+//navbar de la app, se muestra en la parte superior de la pantalla,
+// contiene el icono del menu, el buscador, las notificaciones y el avatar del usuario
 import 'package:e301_login/providers/sidemenu_provider.dart';
 import 'package:e301_login/ui/shared/widgets/navbar_avatar.dart';
 import 'package:e301_login/ui/shared/widgets/notification_indicator.dart';

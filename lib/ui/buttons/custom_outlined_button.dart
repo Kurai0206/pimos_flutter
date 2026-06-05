@@ -1,3 +1,8 @@
+// custom_outlined_button.dart es un widget personalizado 
+//que extiende StatelessWidget para crear un botón con estilo personalizado.
+// El botón tiene propiedades para manejar la acción al presionarlo, el texto que se muestra
+//el boton es el que es utilizado en el login y register, el color del borde y 
+//si el botón está relleno o no.
 import 'package:flutter/material.dart';
 
 class CustomOutlinedButton extends StatelessWidget {

@@ -1,3 +1,11 @@
+//background_image.dart es un widget que se encarga de mostrar una imagen 
+//de fondo en la pantalla de inicio de sesión. La imagen se encuentra 
+//en la carpeta assets y se llama pimos-bg1.jpeg. Además, el widget 
+//también muestra el logo de Pimos en el centro de la pantalla, }
+//que se encuentra en la carpeta assets y se llama pimos-logo.png.
+// El widget utiliza un BoxDecoration para establecer 
+//la imagen de fondo y un Container para centrar el logo en la pantalla.
+
 import 'package:flutter/material.dart';
 
 class BackgroundImage extends StatelessWidget {

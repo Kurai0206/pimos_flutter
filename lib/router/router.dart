@@ -1,3 +1,5 @@
+// router.dart es el archivo principal para configurar las
+// rutas de la aplicación utilizando Fluro.
 import 'package:e301_login/router/admin_handlers.dart';
 import 'package:e301_login/router/dashboard_handlers.dart';
 import 'package:e301_login/router/no_page_found_handlers.dart';

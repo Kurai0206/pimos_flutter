@@ -1,3 +1,12 @@
+// dashboard_layout.dart es el layout principal de la aplicación,
+// que se encarga de mostrar la barra lateral (Sidebar) y la barra de navegación 
+//(Navbar) en todas las páginas del dashboard. El widget hijo (child) se muestra debajo de la Navbar
+// y al lado de la Sidebar, dependiendo del tamaño de la pantalla. Si el tamaño de la pantalla
+// es menor a 700 píxeles, la Sidebar se oculta y se muestra un botón en la Navbar para abrirla.
+//otron archgivo para que sea responsivo y se adapte a diferentes tamaños de pantalla. 
+//Además, utiliza un AnimationController para animar la apertura y cierre de la Sidebar en pantallas 
+//pequeñas. para el suido de la barra lateral (Sidebar) y la barra de navegación (Navbar) 
+//en todas las páginas del dashboard.
 import 'package:e301_login/providers/sidemenu_provider.dart';
 import 'package:e301_login/ui/shared/navbar.dart';
 import 'package:e301_login/ui/shared/sidebar.dart';

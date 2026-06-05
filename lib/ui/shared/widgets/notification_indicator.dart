@@ -1,3 +1,10 @@
+// notification_indicator.dart es un widget que muestra un indicador de notificaciones 
+//en la barra de navegación (Navbar) del dashboard.
+// El indicador se muestra como un círculo rojo en la esquina superior derecha del 
+//icono de notificaciones.
+// Este widget se utiliza para alertar al usuario sobre nuevas notificaciones y 
+//mejorar la experiencia de usuario en el dashboard.
+
 import 'package:flutter/material.dart';
 
 class NotificationIndicator extends StatelessWidget {

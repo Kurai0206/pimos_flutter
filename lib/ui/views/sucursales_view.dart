@@ -1,3 +1,8 @@
+// vista de sucursales, se muestra una sección de héroe con una imagen de fondo y un título,
+// también se muestra una sección con el título "Encuentra tu sucursal" 
+//y una descripción de cada sucursal, 
+//cada sucursal tiene un botón para abrir la ubicación en Google Maps y un mapa estático de la ubicación.
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';

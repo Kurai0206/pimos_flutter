@@ -1,3 +1,7 @@
+// white_card.dart es un widget personalizado que extiende 
+//StatelessWidget para crear una tarjeta blanca con un título opcional y un contenido. 
+//El widget tiene propiedades para manejar el título, el contenido y el ancho de la tarjeta.
+//
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

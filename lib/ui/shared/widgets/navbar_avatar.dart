@@ -1,3 +1,11 @@
+// navbar_avatar.dart es un widget que muestra un 
+//avatar en la barra de navegación (Navbar) del dashboard.
+// El avatar se muestra como una imagen circular utilizando el widget ClipOval, y se carga desde
+//en el navegador es la imagen de un mono negro, que se obtiene a través de una URL. 
+//Este widget se utiliza para representar al usuario actual en la barra de navegación,
+// proporcionando una forma visual de identificar al usuario y mejorar 
+//la experiencia de usuario en el dashboard.
+
 import 'package:flutter/material.dart';
 
 class NavbarAvatar extends StatelessWidget {

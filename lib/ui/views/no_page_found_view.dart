@@ -1,3 +1,4 @@
+// vista de página no encontrada, se muestra un mensaje indicando que la página no fue encontrada.
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

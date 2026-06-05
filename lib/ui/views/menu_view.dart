@@ -1,3 +1,6 @@
+// vista del menú, se muestra el menú de productos con sus opciones,
+// también se muestra un botón para realizar el pedido y un resumen del pedido seleccionado.
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

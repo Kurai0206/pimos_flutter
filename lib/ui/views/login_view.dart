@@ -1,3 +1,6 @@
+// vista de login, se muestra un formulario de login con los campos de correo electrónico y contraseña,
+// también se muestra un botón para ingresar y un enlace para crear una nueva cuenta.
+
 import 'package:e301_login/providers/auth_provider.dart';
 import 'package:e301_login/providers/login_form_provider.dart';
 import 'package:e301_login/router/router.dart';

@@ -1,3 +1,8 @@
+// vista de promociones, se muestra una sección de héroe con una imagen de fondo y un título,
+// también se muestra una sección con tarjetas de promociones, 
+//cada tarjeta tiene una imagen, un título, una descripción y una etiqueta de promoción,
+// al hacer hover sobre la tarjeta se muestra un efecto de zoom y sombra,
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

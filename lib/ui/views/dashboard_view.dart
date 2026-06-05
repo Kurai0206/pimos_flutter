@@ -1,3 +1,7 @@
+// vista del dashboard, se muestra la información principal del restaurante,
+// como las promociones, el menú, la historia del restaurante y un botón para personalizar
+// el pedido. También se muestra un footer con la información de contacto y las redes sociales
+// del restaurante.
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

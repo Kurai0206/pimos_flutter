@@ -1,3 +1,7 @@
+// vista de registro, se muestra un formulario de registro con los campos de nombre, 
+//correo electrónico y contraseña,
+// también se muestra un botón para crear la cuenta y un enlace para ir al login.
+
 import 'package:e301_login/providers/register_form_provider.dart';
 import 'package:e301_login/router/router.dart';
 import 'package:e301_login/ui/buttons/custom_outlined_button.dart';

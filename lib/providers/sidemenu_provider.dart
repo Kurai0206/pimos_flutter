@@ -1,3 +1,5 @@
+// sidemenu_provider.dart es para manejar el estado del menú lateral (SideMenu) en la aplicación.
+// Proporciona métodos para abrir, cerrar y alternar el estado del menú lateral, así
 import 'package:flutter/widgets.dart';
 
 class SidemenuProvider {

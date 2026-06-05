@@ -1,3 +1,7 @@
+// admin_handlers.dart es para manejar las rutas relacionadas con la autenticación del usuario, 
+//como el inicio de sesión (Login) y el registro (Register). Verifica si el usuario está
+// autenticado antes de mostrar las vistas correspondientes. Si el usuario ya está autenticado,
+
 import 'package:e301_login/providers/auth_provider.dart';
 import 'package:e301_login/ui/views/dashboard_view.dart';
 import 'package:e301_login/ui/views/login_view.dart';

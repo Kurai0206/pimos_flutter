@@ -1,3 +1,7 @@
+// link_text.dart es un widget personalizado que extiende
+// StatefulWidget para crear un texto con estilo de enlace (link).
+// El widget tiene propiedades para manejar el texto que se muestra y la acción al presionarlo
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

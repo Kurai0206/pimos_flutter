@@ -1,3 +1,6 @@
+// vista de galería, se muestra una grilla de imágenes con las diferentes
+// categorías de productos del restaurante,
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

@@ -1,3 +1,6 @@
+// vista de nosotros, se muestra información sobre la empresa, su misión y visión, 
+//y un pie de página con información de contacto y redes sociales.
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

@@ -1,3 +1,6 @@
+//links_bar.dart es un widget que se encarga de mostrar
+// una barra de enlaces en la parte inferior de la pantalla de inicio de sesión.
+
 import 'package:e301_login/ui/buttons/link_text.dart';
 import 'package:flutter/material.dart';
 

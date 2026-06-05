@@ -1,3 +1,7 @@
+//sidebar de la app, se muestra en la parte izquierda de la pantalla, 
+//contiene el logo de la app y los enlaces a las diferentes secciones de la app como
+// inicio, nosotros, menú, promociones, galería, contacto y un botón de salir para cerrar sesión
+
 import 'package:e301_login/providers/auth_provider.dart';
 import 'package:e301_login/providers/sidemenu_provider.dart';
 import 'package:e301_login/router/router.dart';

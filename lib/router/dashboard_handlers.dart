@@ -1,3 +1,6 @@
+// dashboard_handlers.dart es para manejar las rutas del dashboard y 
+//verificar la autenticación del usuario antes de mostrar las vistas correspondientes.
+// Si el usuario no está autenticado, se redirige a la vista de inicio de sesión (LoginView).
 import 'package:e301_login/providers/auth_provider.dart';
 import 'package:e301_login/ui/views/contacto_view.dart';
 import 'package:e301_login/ui/views/dashboard_view.dart';

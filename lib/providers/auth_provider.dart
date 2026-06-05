@@ -1,3 +1,5 @@
+// auth_provider.dart es para manejar la autenticación del usuario en la aplicación.
+// Proporciona métodos para iniciar sesión, cerrar sesión y verificar si el usuario está autenticado.
 import 'package:e301_login/router/router.dart';
 import 'package:e301_login/services/local_storage.dart';
 import 'package:e301_login/services/navigation_service.dart';
@@ -12,7 +14,9 @@ class AuthProvider extends ChangeNotifier {
   AuthProvider() {
     isAuthenticated();
   }
-
+// El método login simula un proceso de autenticación exitoso, 
+//estableciendo un token ficticio y actualizando el estado de autenticación. Luego,
+// redirige al usuario al dashboard.
   login(String email, String password) {
     _token = 'hjasd.hjgshjghsaj.kjjhsjkh';
     LocalStorage.prefs.setString('token', _token!);
@@ -20,7 +24,8 @@ class AuthProvider extends ChangeNotifier {
     notifyListeners();
     NavigationService.replaceTo(Flurorouter.dashboardRoute);
   }
-
+// El método logout elimina el token de autenticación,
+// actualiza el estado a no autenticado y redirige al usuario a la vista de inicio de sesión.
   logout() {
     _token = null;
     LocalStorage.prefs.remove('token');
@@ -29,6 +34,8 @@ class AuthProvider extends ChangeNotifier {
     NavigationService.replaceTo(Flurorouter.loginRoute);
   }
 
+// El método isAuthenticated verifica si hay un token de autenticación almacenado.
+// Si no hay token, establece el estado como no autenticado. En este ejemplo, incluso si hay un token,
   Future<bool> isAuthenticated() async {
     final token = LocalStorage.prefs.getString('token');
 

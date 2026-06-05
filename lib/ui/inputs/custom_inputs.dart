@@ -1,3 +1,9 @@
+// custom_inputs.dart es una clase que proporciona métodos estáticos para 
+//crear decoraciones de entrada personalizadas para campos de texto en Flutter.
+// La clase tiene dos métodos: loginInputDecoration y searchInputDecoration, que son utilizados 
+//para crear decoraciones de entrada específicas para formularios de inicio de sesión y 
+//campos de búsqueda, respectivamente. como lo que se muestra en el ejemplo de uso en el
+// comentario al final del archivo.
 import 'package:flutter/material.dart';
 
 class CustomInputs {

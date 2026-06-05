@@ -1,3 +1,6 @@
+// vista de productos, se muestra una sección de héroe con una imagen de fondo y un título,
+// también se muestra una sección con el título "Mis Productos" y una descripción,
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

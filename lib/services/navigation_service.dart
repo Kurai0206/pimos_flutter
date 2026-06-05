@@ -1,3 +1,5 @@
+// navigation_service.dart es para manejar la navegación entre vistas en la aplicación.
+// Proporciona métodos para navegar a una ruta específica o reemplazar la ruta actual.
 import 'package:flutter/material.dart';
 
 class NavigationService {
